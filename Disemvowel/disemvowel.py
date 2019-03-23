@@ -1,16 +1,13 @@
 def disemvowel(word):
     
-  vowels = list('aeiouAEIOU')
-  
-  word = list(word)
-  
-  for letter in word:
-    if letter in vowels:
-      print(letter)
-      word.remove(letter)
-  
-  word = ''.join(word)
-  
-  return word
+    new_word = ''
+
+    vowels = 'aeiouAEIOU'
+
+    for letter in word:
+        if letter.lower() not in vowels:
+            new_word += letter
+
+    return new_word
 
 print(disemvowel("UZOOeMGAd"))
