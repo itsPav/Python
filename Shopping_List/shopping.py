@@ -11,6 +11,9 @@ def clear_screen():
 def add_to_list(item):
   show_list()
   
+  if len(item) == 0:
+    return
+
   if len(shopping_list):
     position = input("Where should I add {}?\n"  
                      "Press ENTER to add to the end of the list\n"
